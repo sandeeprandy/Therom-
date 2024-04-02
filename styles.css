@@ -1,0 +1,306 @@
+/* Default styles for all screen sizes */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, figure, figcaption, blockquote, dl, dd {
+  margin: 0;
+  padding: 0;
+}
+
+.maincntr {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+
+.part2 {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, 
+    #8b9be9e6 0%, 
+    #18025dba 20%, 
+    #ecf9f9 20%, 
+    #b7e6f5 100% 
+  );
+}
+
+.logout {
+  position: fixed;
+  bottom: 0;
+}
+
+header {
+  color: white;
+  padding: 10px 20px;
+}
+
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.user-image {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.user-name {
+  color: white;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  padding: 8px 30px 8px 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+}
+
+.notification-icon {
+  margin-left: 20px;
+}
+
+.notification-image {
+  width: 30px;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.events-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  flex-basis: calc(50% - 20px);
+  height: 140px; 
+  overflow-y: scroll;
+  gap: 5px;
+}
+
+
+
+.person {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.prson-card {
+  display: flex;
+  flex-direction: row;
+  font-size: 07px;
+}
+
+
+
+.evntbtn {
+  height: 30px;
+  background-color: #8c75eb;
+  color: #ecf9f9;
+  border-radius: 5px;
+}
+
+.project-heading {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Table Container Styles */
+.table-container {
+  width: 100%;
+  height: 30%;
+  overflow-x: auto; 
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Financial Table Styles */
+.finance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.finance-table th, .finance-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+/* Card Container Styles */
+.card-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* Card Styles */
+.card {
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+  height: 60px;
+  width: 150px;
+  flex-basis: calc(50% - 20px);
+}
+
+/* Card Title Styles */
+.card-title {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Card Content Styles */
+.card-content {
+  color: #666;
+}
+
+/* Sidebar Styles */
+.sidebar {
+  background-color: #fefdfd;
+  padding: 20px;
+  width: 30vh; 
+  height: 100vh; 
+  overflow-y: auto;
+}
+
+/* Sidebar Title Styles */
+.sidebar-title {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Sidebar Menu Styles */
+.sidebar-menu {
+  list-style-type: none;
+  padding-top: 80px;
+}
+
+.sidebar-menu li {
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.sidebar-menu li span {
+  margin-right: 10px;
+}
+
+/* Media Queries for Mobile View */
+@media only screen and (max-width: 768px) {
+  .maincntr {
+    flex-direction: column;
+  }
+
+  .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-right {
+    margin-top: 10px;
+  }
+
+  .user-info {
+    margin-right: 0;
+  }
+
+  .search-bar {
+    margin-top: 10px;
+  }
+
+  .notification-icon {
+    margin-left: 0;
+  }
+
+  main {
+    padding: 10px;
+  }
+
+  .events-card {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex-basis: calc(100% - 20px);
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Media Queries for Tablet View */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .main-nav {
+    justify-content: center;
+  }
+
+  .nav-right {
+    margin-top: 0;
+    margin-left: 20px;
+  }
+
+  .search-bar {
+    margin-top: 0;
+    margin-left: auto;
+  }
+
+  .notification-icon {
+    margin-left: 20px;
+  }
+
+  .card-container {
+    flex-direction: row;
+  }
+
+  .card {
+    flex-basis: calc(50% - 20px);
+  }
+
+  .sidebar {
+    width: 30vh;
+    height: 100vh;
+  }
+}
